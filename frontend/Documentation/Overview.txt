@@ -1,0 +1,9 @@
+Tech Stack
+
+Javascript
+ReactJS (Frontend Library)
+HTML
+CSS
+
+
+

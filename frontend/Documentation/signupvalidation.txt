@@ -1,0 +1,30 @@
+Signup Validation Function Documentation
+The provided validation function is designed to validate name, email, and password fields based on predefined patterns. The function returns an object containing error messages for any validation issues encountered during the process.
+
+Function Details
+1. Validation(values)
+Description: Validates name, email, and password fields using predefined patterns.
+
+Parameters:
+
+values (object): An object containing user input values, typically from a form.
+Return Value:
+
+An object containing error messages for name, email, and password validation.
+2. Validation Patterns
+Name Validation
+Checks if the name field is empty.
+Email Validation
+email_pattern: Checks for a valid email format using a regular expression.
+Password Validation
+password_pattern: Enforces password requirements using a regular expression.
+At least one digit.
+At least one lowercase letter.
+At least one uppercase letter.
+Minimum length of 8 characters.
+3. Error Messages
+If the name field is empty, an error message is set.
+If the email field is empty, an error message is set.
+If the email does not match the email pattern, an error message is set.
+If the password field is empty, an error message is set.
+If the password does not match the password pattern, an error message is set.

@@ -1,0 +1,22 @@
+Signup Component Documentation
+The Signup component is a React functional component that provides a user interface for user registration. It includes form fields for name, email, and password, with validation logic using the Validation function. The component uses the axios library to make an asynchronous POST request to the backend server for user registration.
+
+Component Details
+1. State Variables
+values: An object representing the form input values for name, email, and password.
+error: An object to store validation error messages.
+2. Hooks
+useState: Used to manage state variables.
+useNavigate: Provides the ability to navigate between different views using the navigate function.
+3. Functions
+handleInput(event)
+Description: Handles input changes in the form fields and updates the state accordingly.
+handleSubmit(event)
+Description: Handles form submission.
+Validates form fields using the Validation function.
+Makes a POST request to the backend for user registration.
+Navigates to the login page on successful registration.
+4. JSX Structure
+Form with input fields for name, email, and password.
+Error messages displayed for validation issues.
+"Login" link to navigate to the login page.
