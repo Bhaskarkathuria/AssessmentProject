@@ -1,0 +1,13 @@
+Backend Tech Stack:
+nodejs
+expressjs framework
+MYSQL database
+Sequelize ORM 
+JWT Authentication
+bcrypt library 
+dotenv package for environment variables
+
+
+Documentaion files are with same name as of Code files used in project.
+All API's are working, Tested on POSTMAN
+All CRUD operations are working on database.

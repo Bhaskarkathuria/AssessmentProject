@@ -1,0 +1,60 @@
+Expense Management API Documentation
+Overview
+This documentation outlines the Express.js API for managing expenses, including functionality for creating, retrieving, and deleting expenses. User authentication is enforced through middleware to ensure that only authenticated users can access these endpoints. The API uses Sequelize as an ORM for database interactions.
+
+Endpoints
+1. Create Expense
+Endpoint: POST /
+Description: Allows authenticated users to create a new expense record.
+
+Request Payload:
+
+date (string): Date of the expense.
+amount (number): Amount of the expense.
+description (string): Description of the expense.
+category (string): Category of the expense.
+Success Response:
+
+Status Code: 200 OK
+Body: Details of the created expense, including date, amount, description, category, income, and expense.
+Error Responses:
+
+Status Code: 500 Internal Server Error
+Body: Error message indicating that an error occurred during the creation of the expense.
+2. Retrieve Expenses
+Endpoint: GET /
+Description: Allows authenticated users to retrieve their expense records with pagination support.
+
+Query Parameters:
+
+page (number): Page number for pagination.
+limit (number): Number of items per page.
+Success Response:
+
+Status Code: 200 OK
+Body: Paginated list of expense records along with additional metadata like total count and pagination details.
+Error Responses:
+
+Status Code: 500 Internal Server Error
+Body: Error message indicating that an error occurred during the retrieval of expenses.
+3. Delete Expense
+Endpoint: DELETE /:id
+Description: Allows authenticated users to delete a specific expense record identified by its ID.
+
+Path Parameter:
+
+id (string): ID of the expense to be deleted.
+Success Response:
+
+Status Code: 200 OK
+Body: Details of the deleted expense.
+Error Responses:
+
+Status Code: 500 Internal Server Error
+Body: Error message indicating that an error occurred during the deletion of the expense.
+Middleware
+User Authentication Middleware
+Description: Ensures that only authenticated users can access the expense-related endpoints.
+Dependencies
+Express: A web application framework for Node.js.
+Sequelize: A promise-based Node.js ORM for PostgreSQL, MySQL, SQLite, and MSSQL.

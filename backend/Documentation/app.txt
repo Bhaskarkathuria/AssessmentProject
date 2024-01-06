@@ -1,0 +1,40 @@
+Expense Management Server Documentation
+This documentation provides an overview of the structure and setup of the Expense Management Server, which includes routes for user signup, login, and expense management. The server utilizes Sequelize as an ORM for interacting with a PostgreSQL database and is built using Express.js.
+
+Server Structure
+1. Dependencies
+Sequelize: A promise-based Node.js ORM for PostgreSQL, MySQL, SQLite, and MSSQL.
+Express: A web application framework for Node.js.
+body-parser: Middleware to parse JSON request bodies.
+cors: Middleware to enable Cross-Origin Resource Sharing.
+AWS SDK: Software development kit for interacting with Amazon Web Services.
+path: Module for working with file paths.
+2. Database Models
+User Model (userinfo)
+Fields:
+id: Primary key.
+Other fields for user information.
+Expense Model (expense)
+Fields:
+id: Primary key.
+Other fields for expense details.
+Foreign key (userInfoId) linking to the id in the userinfo table.
+3. Routes
+User Signup and Login Routes
+/signup: Endpoint for user registration.
+/login: Endpoint for user authentication.
+Expense Management Routes
+/expenses: Endpoint for managing user expenses, including creation, retrieval, and deletion.
+4. AWS Integration
+Integration with Amazon Web Services for potential file storage or other AWS services.
+5. Server Initialization
+Synchronization with the database using Sequelize.
+Server listening on port 5000.
+
+Setup
+Install dependencies:
+Ensure that the necessary AWS credentials are configured if using AWS services.
+Configure database connection in ./config/database.js.
+Run the server:
+
+Access the API at http://localhost:5000/.

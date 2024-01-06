@@ -1,0 +1,29 @@
+User Authentication API Documentation
+Overview
+This documentation outlines the Express.js API for user authentication. The API allows users to log in by providing their email and password. If the provided credentials match an existing user, a JSON Web Token (JWT) is generated and returned, allowing the user to access protected routes.
+
+Endpoint
+1. User Login
+Endpoint: POST /
+Description: Allows users to log in by providing their email and password. If the provided credentials are valid, a JWT is generated and returned in the response.
+
+Request Payload:
+
+email (string): User's email address.
+password (string): User's password.
+Success Response:
+
+Status Code: 200 OK
+Body: JSON object containing a success message and a JWT for authentication.
+
+Error Responses:
+
+Status Code: 400 Bad Request
+Body: Error message indicating that the user does not exist or that an error occurred during the authentication process.
+Status Code: 500 Internal Server Error
+Body: Error message indicating a server-side issue.
+Dependencies
+Express: A web application framework for Node.js.
+Sequelize: A promise-based Node.js ORM for PostgreSQL, MySQL, SQLite, and MSSQL.
+bcrypt: A library for hashing passwords.
+jsonwebtoken: A library for generating and verifying JSON Web Tokens (JWT).

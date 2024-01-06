@@ -1,0 +1,46 @@
+Overview
+This documentation provides an overview of the Express.js API for user registration and retrieval. The API uses Sequelize as an ORM for interacting with a database and bcrypt for password hashing.
+
+Endpoints
+1. User Registration
+Endpoint: POST /
+Description: Allows users to register by providing their name, email, and password. The password is securely hashed using bcrypt before storing it in the database.
+
+Request Payload:
+
+name (string): User's name.
+email (string): User's email address.
+password (string): User's password.
+
+Success Response:
+Status Code: 200 OK
+
+Error Responses:
+
+Status Code: 400 Bad Request
+Body: Error message indicating that the provided email already exists.
+
+2. Retrieve All Users
+Endpoint: GET /
+Description: Retrieves a list of all registered users.
+
+Sample Response:
+
+Status Code: 200 OK
+Body: An array of user objects, each containing user details.
+
+Error Responses:
+
+Status Code: 500 Internal Server Error
+Body: Error message indicating a server-side issue.
+
+Dependencies
+Express: A web application framework for Node.js.
+Sequelize: A promise-based Node.js ORM for PostgreSQL, MySQL, SQLite, and MSSQL.
+bcrypt: A library for hashing passwords.
+
+Setup Commands
+npm install express sequelize bcrypt
+Configure database connection in ../config/database.js.
+node your_server_file.js
+Access the API at http://localhost:your_port/.
